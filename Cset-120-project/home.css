@@ -1,0 +1,29 @@
+.navbar a {
+    color: black
+}
+
+.navbar a:hover {
+    color: gold;
+}
+
+.navbar img {
+    width: 100px;
+    height: 100px;
+}
+
+.navbarScroll.navbarDark {
+    background-color: black;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(247, 247, 247);
+    margin-right: 30px;
+}

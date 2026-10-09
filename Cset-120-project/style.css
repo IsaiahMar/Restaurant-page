@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/background/paris.jpeg);
+    height: 100vh;
+    background-size: cover;
+    font-family: Glass Antiqua;
+}
+
+.backgroundimg {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.099), rgba(0, 0, 0, 0.663)), url(images/207817-freshly-baked-bread-and-pastries-in-the-window-of-.jpg);
+    background-size: cover;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+    font-family: Glass Antiqua;
+}
+
+.backgroundimg2 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.099), rgba(0, 0, 0, 0.663)), url(images/backgroundimg2.0.jpg);
+    background-size: cover;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.backgroundimg3 {
+    height: 100vh;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.099), rgba(0, 0, 0, 0.663)), url(images/270241-food-bakery-chok-and-barcelona-hd.jpg);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero_title {
+    font-size: 4.5rem;
+    font-weight: bold;
+    font-family: Glass Antiqua;
+    color: rgb(17, 229, 162);
+    padding-top: 200px;
+}
+
+.hero_description {
+    font-size: 2rem;
+    font-family: Glass Antiqua;
+    color: white;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    font-family: Glass Antiqua;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.723),rgba(0, 0, 0, 0));
+}
+
+.hero_button {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: Glass Antiqua;
+}
+
+.hero_button:hover {
+    background-color: gold;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
+    }
+}
+
+.socials {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    font-family: Glass Antiqua;
+}
+
+.footer {
+    padding: 40px 0;
+    background-color: #fff;
+    font-family: Glass Antiqua;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 30px;
+    color: 4b4c4d;
+    font-family: Glass Antiqua;
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    border: none;
+    margin: 0 10px;
+    opacity: 0.75;
+    font-family: Glass Antiqua;
+}
+
+.backgroundimg6 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.099), rgba(0, 0, 0, 0.663)), url(images/pexels-aysgul-11532359.jpg);
+    background-size: cover;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.footer .social a:hover {
+    opacity: 1;
+}
+
+.footer ul {
+    margin: top 0;
+    padding: 0;
+    list-style: none;
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: .8;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li:hover {
+    background-color: gold;
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+    font-size: 13px;
+    color: #777;
+    font-family: Glass Antiqua;
+}
+
+.navbar a {
+    color: white;
+    font-family: Glass Antiqua;
+}
+
+/* .backgroundimg8 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.099), rgba(0, 0, 0, 0.663)), url(images/pexels-dominika-roseclay-1982485.jpg);
+    background-size: cover;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+} */
+
+.navbar a:hover {
+    color: gold;
+    ;
+}
+
+.navbar img {
+    width: 100px;
+    height: 100px;
+}
+
+.navbarScroll.navbarDark {
+    background-color: white;
+    transition: 0.5s;
+}
+
+.navbarScroll.navbarDark .navbar-brand {
+    color: black;
+    transition: 0.5s;
+}
+
+.navbarScroll.navbarDark .nav-link {
+    color: black;
+    transition: 0.5s;
+}
+
+.navbarScroll.navbarDark .nav-link:hover {
+    color: gold;
+    transition: 0.5s;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    font-family: Glass Antiqua;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(247, 247, 247);
+    margin-right: 30px;
+    font-family: Glass Antiqua;
+}
+
+.contact {
+    padding: 50px 0;
+    padding-top: 100px;
+    font-family: Glass Antiqua;
+}
+
+.backgroundimg4 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.099), rgba(0, 0, 0, 0.663)), url(images/background4.jpg);
+    background-size: cover;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.backgroundimg5 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.099), rgba(0, 0, 0, 0.663)), url(images/258899-trays-at-a-french-bakery-with-pain-au-chocolatpain.jpg);
+    background-size: cover;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.row img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-top: 10px;
+}
+
+.row img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.gallery {
+    padding: 50px 0;
+    font-family: Glass Antiqua;
+}
+
+.gallery .col-md-4 {
+    padding: 15px;
+}
+
+#receipt {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    background-color: grey;
+    font-family: Glass Antiqua;
+}

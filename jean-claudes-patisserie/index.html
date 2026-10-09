@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jean-Claude’s Pâtisserie · Èze</title>
+  <meta name="description" content="A family bakery in Èze, France. Croissants, breads, coffee and pastries baked every morning. Order online for pickup or delivery.">
+  <meta name="theme-color" content="#faf6f0">
+  <meta property="og:title" content="Jean-Claude’s Pâtisserie">
+  <meta property="og:description" content="Baked before sunrise in Èze. Order online for pickup or delivery.">
+  <meta property="og:image" content="assets/img/hero.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" as="image" href="assets/img/hero.jpg">
+  <script type="module" src="js/pages/home.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"></header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Boulangerie · Pâtisserie · Since 1994</p>
+          <h1 class="display">Baked before sunrise in&nbsp;Èze.</h1>
+          <p class="lede">Three generations of laminated dough, slow-fermented bread and serious coffee, on a hilltop above the Mediterranean. Order ahead and it’s warm when you arrive.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="menu.html">Order for pickup</a>
+            <a class="btn btn--ghost btn--lg" href="about.html">Our story</a>
+          </div>
+          <ul class="hero__facts" role="list">
+            <li><strong>20 min</strong> pickup</li>
+            <li><strong>Free</strong> delivery over $40</li>
+            <li><strong>Tue–Sun</strong> 7:00–18:00</li>
+          </ul>
+        </div>
+        <figure class="hero__media">
+          <img src="assets/img/hero.jpg" width="900" height="1600" alt="A tray of freshly baked cinnamon knots next to a wooden rolling pin.">
+        </figure>
+      </div>
+    </section>
+
+    <section id="featured" class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow">From the counter</p>
+            <h2 id="featured-title" class="section__title">Today’s favorites</h2>
+          </div>
+          <a class="link-arrow" href="menu.html">See the full menu <span aria-hidden="true">→</span></a>
+        </div>
+        <div id="featured-grid" class="card-grid card-grid--3"></div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" aria-labelledby="promise-title">
+      <div class="container">
+        <h2 id="promise-title" class="visually-hidden">Why people come back</h2>
+        <ul class="features" role="list">
+          <li class="feature">
+            <h3>Real butter, real time</h3>
+            <p>Our croissant dough rests for three days. There is no shortcut that tastes the same, so we don’t take one.</p>
+          </li>
+          <li class="feature">
+            <h3>Baked every morning</h3>
+            <p>The ovens start at 4 a.m. Anything left at closing goes to the Èze community kitchen.</p>
+          </li>
+          <li class="feature">
+            <h3>Order ahead</h3>
+            <p>Pick a time, skip the line. Pickup is ready in about 20 minutes, delivery in about 45.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta-band">
+        <div>
+          <h2 class="section__title">Coming up the hill?</h2>
+          <p>We’re on Rue de la Paix, a two-minute walk from the Jardin Exotique.</p>
+        </div>
+        <a class="btn btn--primary btn--lg" href="contact.html">Plan your visit</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+  <noscript><p class="noscript">This site needs JavaScript for the menu and ordering.</p></noscript>
+</body>
+</html>

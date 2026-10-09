@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu · Jean-Claude’s Pâtisserie</title>
+  <meta name="description" content="Croissants, breads, coffee and desserts from Jean-Claude’s Pâtisserie in Èze. Order online for pickup or delivery.">
+  <meta name="theme-color" content="#faf6f0">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/pages/menu.js"></script>
+</head>
+<body data-page="menu">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"></header>
+
+  <main id="main" class="page">
+    <div class="container">
+      <header class="page__head">
+        <p class="eyebrow">Order for pickup or delivery</p>
+        <h1 class="page__title">The menu</h1>
+        <p class="lede">Everything is made in-house each morning. Prices include tax.</p>
+      </header>
+
+      <div class="menu-toolbar">
+        <div id="menu-filters" class="chips" role="group" aria-label="Filter by section"></div>
+        <div class="search">
+          <label for="menu-search" class="visually-hidden">Search the menu</label>
+          <input id="menu-search" class="input search__input" type="search" placeholder="Search croissant, vegan, coffee…" autocomplete="off">
+        </div>
+      </div>
+      <p id="menu-status" class="menu-status" role="status"></p>
+
+      <div id="menu-results"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+  <noscript><p class="noscript">This site needs JavaScript for the menu and ordering.</p></noscript>
+</body>
+</html>

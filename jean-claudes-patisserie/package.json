@@ -1,0 +1,14 @@
+{
+  "name": "jean-claudes-patisserie",
+  "version": "2.0.0",
+  "description": "Online ordering site for a fictional French bakery. Vanilla HTML, CSS and ES modules, no build step.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes http-server -c-1 -p 5501 .",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

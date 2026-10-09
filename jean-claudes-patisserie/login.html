@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in · Jean-Claude’s Pâtisserie</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#faf6f0">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/pages/auth-pages.js"></script>
+</head>
+<body data-page="login">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"></header>
+
+  <main id="main" class="page">
+    <div class="container container--auth">
+      <section class="panel" aria-labelledby="auth-title">
+        <h1 id="auth-title" class="panel__title panel__title--lg">Welcome back</h1>
+        <p class="hint">Log in to prefill checkout. You can also order as a guest.</p>
+        <form id="auth-form" class="form" novalidate>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" class="input" autocomplete="username">
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" class="input" autocomplete="current-password">
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Log in</button>
+        </form>
+        <p class="auth-switch">New here? <a href="signup.html" data-keep-next>Create an account</a></p>
+      </section>
+
+      <aside class="notice notice--demo">
+        <p><strong>Reviewing this project?</strong> A demo manager account can edit the menu.</p>
+        <p class="mono">manager@jeanclaude.demo / croissant123</p>
+        <button id="demo-fill" type="button" class="btn btn--ghost btn--sm">Log in as demo manager</button>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+</body>
+</html>

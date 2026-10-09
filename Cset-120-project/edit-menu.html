@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Menu</title>
+    <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Caveat&family=Glass+Antiqua&family=Indie+Flower&family=Lato:wght@100;300;400&family=Shadows+Into+Light&family=Sometype+Mono&display=swap " rel="stylesheet ">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <h1>Manager's View</h1>
+    <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <img src="images/Logo.jpg" alt="logo"> Jean-Claude’s Patisserie's</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+        </div>
+    </nav>
+    <br><br><br>
+<div class="managerMode">
+  <p>Add items to the Menu</p>
+    <div>
+     <form action="">
+                <label for="">Name:</label>
+                <input type="text" class="newProducts" name="product-name" id="productName">
+        </div>
+        <div>
+            <label for="">Price:</label>
+            <input type="text" class="newProducts" name="product-price" id="product-price">
+        </div>
+        <div>
+            <label for="">Description:</label>
+            <input type="text" class="newProducts" name="product-desc" id="product-desc">
+        </div>
+        <div>
+            <label for="">Image address:</label>
+            <input type="text" class="newProducts" name="product-img" id="product-img">
+        </div>
+     </form>
+        <div>
+            <button onclick="addBreadItems()">Add to Bread section</button>
+            <button onclick="addBeverageItems()">Add to Beverage section</button>
+            <button onclick="addDessertItems()">Add to Dessert section</button>
+            <button onclick="addBreakfastItems()">Add to Breakfast section</button>
+        </div>
+        
+        <br>
+        <button id="saveBtn" onclick="saveSession()">Save</button>
+        <br>
+        <button onclick="removeSelected()">Remove</button>
+        <br>
+        <button onclick="staffLogout()">Log Out</button>
+
+    </div>
+
+    <br><br><br>
+    <div id="every-menu">
+        <h2>Everyday Menu Items (always in)</h2>
+    </div>
+
+    <div id="display-menu">
+        <div id="newest-menu">
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var element = document.getElementById('display-menu')
+            // Show the manager's saved menu, or the original if nothing has been saved yet
+            element.innerHTML = localStorage.getItem('Original-Menu') ?? orgMenu
+        })
+        window.onload = function() {
+            document.getElementsByClassName('product-price').contentEditable = true;
+        }
+    </script>
+    <script src="index.js"></script>
+    <script src="edit-menu.js"></script>
+</body>
+
+</html>

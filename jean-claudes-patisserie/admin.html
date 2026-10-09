@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage menu · Jean-Claude’s Pâtisserie</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#faf6f0">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/pages/admin.js"></script>
+</head>
+<body data-page="admin" data-requires-manager>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"></header>
+
+  <main id="main" class="page">
+    <div id="admin" class="container" hidden>
+      <header class="page__head page__head--row">
+        <div>
+          <p class="eyebrow">Manager</p>
+          <h1 class="page__title">Menu</h1>
+          <p class="hint">Changes are saved in this browser and show up on the menu right away.</p>
+        </div>
+        <button id="reset-menu" type="button" class="btn btn--ghost">Restore original menu</button>
+      </header>
+
+      <section class="panel" aria-labelledby="add-title">
+        <h2 id="add-title" class="panel__title">Add an item</h2>
+        <form id="item-form" class="form form--grid" novalidate>
+          <div class="field">
+            <label for="item-name">Name</label>
+            <input id="item-name" name="name" class="input" maxlength="80">
+          </div>
+          <div class="field">
+            <label for="item-category">Section</label>
+            <select id="item-category" name="category" class="input"></select>
+          </div>
+          <div class="field">
+            <label for="item-price">Price ($)</label>
+            <input id="item-price" name="price" class="input" inputmode="decimal" placeholder="4.50">
+          </div>
+          <div class="field form--grid__wide">
+            <label for="item-description">Description</label>
+            <input id="item-description" name="description" class="input" maxlength="200">
+          </div>
+          <div class="field form--grid__wide">
+            <label for="item-image">Image URL <span class="optional">(optional)</span></label>
+            <input id="item-image" name="image" class="input" type="url" placeholder="https://…">
+          </div>
+          <div class="form--grid__actions">
+            <button type="submit" class="btn btn--primary">Add to menu</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" aria-labelledby="items-title">
+        <div class="panel__head">
+          <h2 id="items-title" class="panel__title">Current items</h2>
+          <span id="items-count" class="hint"></span>
+        </div>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Section</th>
+                <th scope="col">Price ($)</th>
+                <th scope="col" class="center">Featured</th>
+                <th scope="col" class="right"><span class="visually-hidden">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody id="items-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+</body>
+</html>

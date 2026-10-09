@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout · Jean-Claude’s Pâtisserie</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#faf6f0">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/pages/checkout.js"></script>
+</head>
+<body data-page="checkout">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"></header>
+
+  <main id="main" class="page">
+    <div class="container">
+      <header class="page__head">
+        <h1 class="page__title">Checkout</h1>
+      </header>
+
+      <div id="checkout-empty" class="empty-state" hidden>
+        <p>Your bag is empty. Nothing to check out yet.</p>
+        <a class="btn btn--primary" href="menu.html">Browse the menu</a>
+      </div>
+
+      <div class="checkout">
+        <form id="checkout-form" class="form checkout__form" novalidate hidden>
+          <fieldset class="panel">
+            <legend class="panel__title">Your details</legend>
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" class="input" autocomplete="name">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" class="input" autocomplete="email">
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" class="input" autocomplete="tel" placeholder="+33 6 12 34 56 78">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="panel">
+            <legend class="panel__title">Pickup or delivery</legend>
+            <div class="segmented">
+              <label><input type="radio" name="fulfillment" value="pickup" checked> <span>Pickup <small>~20 min</small></span></label>
+              <label><input type="radio" name="fulfillment" value="delivery"> <span>Delivery <small>~45 min</small></span></label>
+            </div>
+            <fieldset class="subfields" data-show-when="fulfillment=delivery">
+              <legend class="visually-hidden">Delivery address</legend>
+              <div class="field">
+                <label for="address">Street address</label>
+                <input id="address" name="address" class="input" autocomplete="street-address">
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="city">City</label>
+                  <input id="city" name="city" class="input" autocomplete="address-level2" value="Èze">
+                </div>
+                <div class="field">
+                  <label for="notes">Delivery notes <span class="optional">(optional)</span></label>
+                  <input id="notes" name="notes" class="input" placeholder="Gate code, floor…">
+                </div>
+              </div>
+            </fieldset>
+          </fieldset>
+
+          <fieldset class="panel">
+            <legend class="panel__title">Tip for the team</legend>
+            <div class="segmented segmented--tips">
+              <label><input type="radio" name="tipChoice" value="0" checked> <span>None</span></label>
+              <label><input type="radio" name="tipChoice" value="10"> <span>10%</span></label>
+              <label><input type="radio" name="tipChoice" value="15"> <span>15%</span></label>
+              <label><input type="radio" name="tipChoice" value="20"> <span>20%</span></label>
+              <label><input type="radio" name="tipChoice" value="custom"> <span>Custom</span></label>
+            </div>
+            <fieldset class="subfields" data-show-when="tipChoice=custom">
+              <legend class="visually-hidden">Custom tip</legend>
+              <div class="field field--narrow">
+                <label for="customTip">Tip amount ($)</label>
+                <input id="customTip" name="customTip" class="input" inputmode="decimal" placeholder="3.00">
+              </div>
+            </fieldset>
+          </fieldset>
+
+          <fieldset class="panel">
+            <legend class="panel__title">Payment</legend>
+            <div class="segmented">
+              <label><input type="radio" name="payment" value="counter" checked> <span>Pay at the counter</span></label>
+              <label><input type="radio" name="payment" value="card"> <span>Card</span></label>
+            </div>
+            <fieldset class="subfields" data-show-when="payment=card">
+              <legend class="visually-hidden">Card details</legend>
+              <p class="notice">Demo checkout. Don’t enter a real card. Try <code>4242 4242 4242 4242</code>, any future date and any 3 digits. Only the last four digits are kept.</p>
+              <div class="field">
+                <label for="cardName">Name on card</label>
+                <input id="cardName" name="cardName" class="input" autocomplete="cc-name">
+              </div>
+              <div class="field">
+                <label for="cardNumber">Card number</label>
+                <input id="cardNumber" name="cardNumber" class="input mono" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456">
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="cardExpiry">Expiry (MM/YY)</label>
+                  <input id="cardExpiry" name="cardExpiry" class="input mono" inputmode="numeric" autocomplete="cc-exp" placeholder="09/28">
+                </div>
+                <div class="field">
+                  <label for="cardCvc">Security code</label>
+                  <input id="cardCvc" name="cardCvc" class="input mono" inputmode="numeric" autocomplete="cc-csc" maxlength="4" placeholder="123">
+                </div>
+              </div>
+            </fieldset>
+          </fieldset>
+
+          <button type="submit" class="btn btn--primary btn--lg btn--block">Place order</button>
+        </form>
+
+        <aside id="order-summary" class="panel checkout__summary" aria-live="polite" hidden></aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+</body>
+</html>

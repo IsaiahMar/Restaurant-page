@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="payment.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel=" preconnect " href="https://fonts.gstatic.com/ " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Caveat&family=Glass+Antiqua&family=Indie+Flower&family=Lato:wght@100;300;400&family=Shadows+Into+Light&family=Sometype+Mono&display=swap " rel="stylesheet ">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbarScroll ">
+        <div class="container ">
+            <a class="navbar-brand" href="index.html"> <img src="images/Logo.jpg" alt="logo"> Jean-Claude’s Patisserie</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbar-content ">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll " style="--bs-scroll-height: 100px; ">
+                    <li class="nav-item ">
+                        <a class="nav-link " href="signOut.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="about.html ">About</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="menu.html ">Menu</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="contact.html ">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="staff-login.html">Staff</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="backgroundimg8" id="home ">
+        <div class=container1>
+            <div class=contained-1>
+                <h3>Will this order be for <button class="hero_button " onclick="openForm1()">Cash</button> or <button class="hero_button " onclick="openForm2()">Card</button>?
+                </h3>
+            </div>
+        </div>
+        <section class="form1">
+            <br><br><br>
+            <div class="form-popup" id="forms">
+                <form class="form-contain" onsubmit="formCheck();return false">
+                    <div class="column">
+                        <h4>~ Payment ~</h4>
+                    </div>
+                    <div class="row">
+                        <div class="column-container">
+                            <div class="column">
+                                <h4>Personal Information</h4>
+                                <div class="content-align">
+                                    <div class="content">
+                                        <label for="phone1">*Phone Number:</label>
+                                        <input class="required" type="text" id="phone1" placeholder="04.XX.XX.XX.XX" name="phonenumber1" minlength="10" maxlength="10" name="phone1" onkeypress="return checkNumb(event)" required>
+                                    </div>
+                                    <div class="content">
+                                        <label for="address1">*Address:</label>
+                                        <input class="required" type="text" id="address1" placeholder="Villefranche-sur-Mer" required>
+                                    </div>
+                                    <div class="content">
+                                        <label for="city1">*City:</label>
+                                        <input class="required" type="text" id="city1" placeholder="Èze" name="cities1" required>
+                                    </div>
+                                    <div class="content">
+                                        <label for="region1">Region/Department:</label>
+                                        <input type="text" id="region1" placeholder="Provence-Alpes-Côte d'Azur" name="deparment1">
+                                    </div>
+                                    <div class="content">
+                                        <p style="text-align: center;"><i>Any *field is required.</i></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="cash" class="column">
+                                <div class="content-align">
+                                    <h4 style="text-align: center;">Cash</h4>
+                                    <p style="text-align: center;"><i>Pay upon pickup or Delivery.</i></p>
+                                    <div class="content">
+                                        <label for="tip1">*$ Tip</label>
+                                        <input type="text" class="tip" id="tip1" placeholder="$0.00" min="0" name="tips1" onchange="updateTotalWithTip()">
+                                    </div>
+                                    <div class="content">
+                                        <h4 style="text-align: center;">*Pickup or Delivery?</h4>
+                                        <div style="text-align: center;" class="dropdown">
+                                            <select class="pickDeliv" name="selected">
+                                                    <option id="pickup1" value="pickup-1">Pickup</option>
+                                                    <option id="delivery1" value="delivery-1">Delivery</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="cardcredit" class="column">
+                                <div class="content-align">
+                                    <h4 style="text-align: center;">Credit/Debit</h4>
+                                    <div class="content">
+                                        <label for="cardName">*Name on card:</label>
+                                        <input class="requiredcard" type="text" id="cardName" placeholder="Name on Card" name="nameOnCard" required>
+                                    </div>
+                                    <div class="content">
+                                        <label for="creditCard">*Credit/Debit card:</label>
+                                        <input class="requiredcard" type="text" id="creditCard" placeholder="1234-1234-1234-1234" minlength="16" maxlength="16" name="credCard" onkeypress="return checkNumb(event)" required>
+                                    </div>
+                                    <div class="content">
+                                        <label for="exMonth">*Expiration Month</label>
+                                        <input class="requiredcard" type="text" id="exMonth" placeholder="09" name="month" minlength="2" maxlength="2" onkeypress="return checkNumb(event)" required>
+                                    </div>
+                                    <div class="content">
+                                        <label for="exYear">*Exp Year</label>
+                                        <input class="requiredcard" type="text" id="exYear" placeholder="2023" name="year" minlength="4" maxlength="4" onkeypress="return checkNumb(event)" required>
+                                    </div>
+                                    <div class="content">
+                                        <label for="cvvNumb">*CVV</label>
+                                        <input class="requiredcard" type="password" id="cvvNumb" placeholder="123" name="cvv" minlength="3" maxlength="3" onkeypress="return checkNumb(event)" required>
+                                    </div>
+
+                                    <div class="content">
+                                        <label for="tip2">$ Tip</label>
+                                        <input type="text" class="tip" id="tip2" placeholder="$0.00" min="0" name="tips2" onchange="updateTotalWithTip()">
+                                    </div>
+
+                                    <div class="content">
+                                        <h4 style="text-align: center;">*Pickup or Delivery?</h4>
+                                        <div style="text-align: center;" class="dropdown">
+                                            <select class="pickDeliv" name="selected">
+                                                    <option id="pickup1" value="pickup-1">Pickup</option>
+                                                    <option id="delivery1" value="delivery-1">Delivery</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="cartItems" class="column">
+                                <h4>Items in Cart</h4>
+                                <br>
+                                <div class="content-align">
+                                    <div class="cart-row">
+                                        <span class="cart-item cart-header cart-column">ITEM</span>
+                                        <span class="cart-price cart-header cart-column" style="font-family: 'Times New Roman', Times, serif; color: white;">PRICE PER ITEM</span>
+                                        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                                    </div>
+                                    <div id="itemsincart" class="cart-items">
+
+                                    </div>
+                                    <br>
+                                    <div class="cart-total">
+                                        <strong class="cart-total-title" style="font-family: 'Times New Roman', Times, serif; color: white;">Total</strong>
+                                        <span class="cart-total-price" style="font-family: 'Times New Roman', Times, serif; color: white;">$0.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column-container">
+                            <div class="column"><input type="submit" value="Submit" style="padding: 5px; padding-left: 20px; padding-right: 20px; border-radius: 10px;"></input>
+                            </div>
+                            <div class="column"><input type="button" onclick="back()" value="Cancel" style="padding: 5px; padding-left: 20px; padding-right: 20px; border-radius: 10px;"></input>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- <script src="payment.js"></script> -->
+        <script src="menu.js"></script>
+</body>
+
+</html>

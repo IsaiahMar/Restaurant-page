@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="receipt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Caveat&family=Glass+Antiqua&family=Indie+Flower&family=Lato:wght@100;300;400&family=Shadows+Into+Light&family=Sometype+Mono&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <br>
+    <div class="center">
+        <div id="cartItems" class="column">
+            <br>
+            <h2 style="color: white; text-align: center; font-family: glass antiqua;">Thank you for your purchase,<div id="displayName"></div></h2><br>
+                <i style="text-align: center;">Your order will be ready in: <section id="prepTime" style="color: white;"></section></i>
+
+        <br><br>
+            <div class="content-align">
+                <div class="details">~ Order details ~</div>
+                <hr><br>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column" style="color: white;">PRICE PER ITEM</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div id="itemsincart" class="cart-items">
+
+                </div>
+                <br>
+                <div class="cart-total">
+                    <strong class="cart-total-title" style="color: white;">Total</strong>
+                    <span class="cart-total-price" style="color: white;">$0.00</span>
+                </div>
+            </div>
+            <br>
+            <div class="returnHomeButton">
+                <button onclick="returnHome(),clearCart()">Return To Menu</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <br>
+    <!-- <section class="receipt">
+        <pre id="receipt" style="background-color: white; background-size: fill ;"></pre>
+        <button onclick="returnHome(),clearCart()">Return Home</button>
+
+
+    </section> -->
+  
+    <section class="footer ">
+        <div class="social ">
+            <a href="# "><i class="fab fa-facebook-f "></i></a>
+            <a href="https://www.instagram.com/princek_._/ "><i class="fab fa-instagram "></i></a>
+            <a href="# "><i class="fab fa-twitter "></i></a>
+        </div>
+        <ul class="list ">
+            <li><a href="about.html ">About Us</a>
+            </li>
+            <li><a href="contact.html ">Contact Us</a>
+            </li>
+            <li><a href="# ">Privacy Policy</a>
+            </li>
+            <li><a href="# ">Terms & Conditions</a>
+            </li>
+        </ul>
+        <p class="copyright ">
+            Jean-Claude’s Patisserie © 2021
+        </p>
+    </section>
+    <!-- <script>
+        const receipt = localStorage.getItem('receipt');
+
+
+        document.getElementById('receipt').textContent = receipt;
+    </script> -->
+    <script src="receipt.js"></script>
+    <script src="menu.js"></script>
+    <script>
+        window.onload = function() {
+            const namee = document.getElementById('displayName')
+            namee.innerHTML = localStorage.getItem('name')
+            addTipToTotal();
+        }
+
+
+        // let name = localStorage.getItem('name');
+        // document.querySelector(".displayName").innerHTML = name;
+
+        // let prepTime = {
+        //     "Pickup": 30,
+        //     "Delivery": 45
+        // }
+        // function showRandomNumber() {
+        //     document.getElementById("prepTime").innerHTML = rando(5, 10);
+        // }
+        // Window.onload = function() {
+        //     showRandomNumber();
+        // }
+
+        var element = document.getElementById('prepTime')
+        element.innerHTML = getRandomInt(5, 10)
+
+        // document.getElementById('prepTime').textContent = 30;
+
+
+        // let pickOrDelivery = localStorage.getItem('pickOrDelivery');
+        // document.querySelector(".pickOrDelivery").innerHTML = pickOrDelivery;
+
+        // window.onload = function() {
+        //     let name = localStorage.getItem('name');
+        //     document.querySelector(".displayName").innerHTML = name;
+        // }
+
+
+
+
+        // window.onload = function() {
+        //     var element = document.getElementById('pickOrDelivery')
+        //     element.innerHTML = localStorage.getItem('pickOrDelivery')
+        // }
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/nastyox/Rando.js@master/code/plain-javascript/2.0.0/rando-min.js"></script>
+</body>
+
+
+</html>
